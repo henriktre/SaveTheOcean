@@ -15,7 +15,7 @@ public class pendulum : MonoBehaviour
   public float boatPower = 250.0f;
   public float winchPower = 4.0f;
   LineRenderer lineRenderer;
-  
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +26,7 @@ public class pendulum : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        lineRenderer.SetPosition(0, boat.transform.position);
         lineRenderer.SetPosition(1, hook.transform.position);
         hook.GetComponent<Rigidbody>().AddForce(boatSpeed*-1,0,0);
         boat.GetComponent<SpringJoint>().minDistance = ropeLength;
