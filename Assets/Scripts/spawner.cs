@@ -7,6 +7,7 @@ public class spawner : MonoBehaviour
     public GameObject[] entities;
     public List<entity> entityList = new List<entity>();
     float time = 0.0f;
+    public backgroundScript backgroundScript;
 
     // Start is called before the first frame update
     void Start()
@@ -45,11 +46,20 @@ public class spawner : MonoBehaviour
     void Update()
     {
       time += Time.deltaTime;
-      if(time > 1)
+      if(time > 0.1)
       {
         time = 0;
         Vector3 pos = RandomPos();
-        Instantiate(entityList[0].gameObject, pos, Quaternion.identity);
+        foreach (entity ent in entityList)
+        {
+          if(ent.rarity > Random.Range(0,1000))
+          {
+            GameObject obj = Instantiate(ent.gameObject, pos, Quaternion.identity);
+            obj.GetComponent<Rigidbody>().AddForce(backgroundScript.backgroundSpeed*-50,0,0);
+          }
+
+        }
+
       }
 
     }
