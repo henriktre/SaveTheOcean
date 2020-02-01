@@ -6,13 +6,13 @@ public class pendulum : MonoBehaviour
 {
   public GameObject boat;
   public GameObject hook;
-  public float maxSpeed = 500.0f;
+  public float maxSpeed = 50.0f;
   public float minSpeed = 0.0f;
   public float maxLength = 8.0f;
   public float minLength = 1.0f;
   public float boatSpeed = 0.0f;
   public float ropeLength = 1.0f;
-  public float boatPower = 250.0f;
+  public float boatPower = 5.0f;
   public float winchPower = 4.0f;
   LineRenderer lineRenderer;
   
@@ -46,5 +46,10 @@ public class pendulum : MonoBehaviour
         {
             ropeLength += Time.deltaTime * winchPower;
         }
+    }
+
+    public float getBoatspeed()
+    {
+        return boatSpeed;
     }
 }

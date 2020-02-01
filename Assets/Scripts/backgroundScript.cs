@@ -5,9 +5,10 @@ using UnityEngine;
 public class backgroundScript : MonoBehaviour
 {
 
-    public float backgroundSpeed = 10.0f;
+    public float backgroundSpeed = 5.0f;
 
     private Rigidbody2D rb2d;
+    public pendulum pendulum;
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +18,14 @@ public class backgroundScript : MonoBehaviour
 
         //Start the object moving.
         rb2d.velocity = new Vector2(backgroundSpeed, 0);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        backgroundSpeed += pendulum.boatSpeed;
+        Debug.Log(pendulum.getBoatspeed());
         //Start the object moving (- because it moves backwards).
         rb2d.velocity = new Vector2(-backgroundSpeed, 0);
 

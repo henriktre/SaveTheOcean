@@ -238,8 +238,13 @@ PrefabInstance:
     - target: {fileID: 8863970809156962816, guid: 26bf4b9927d07b246afbde4c175d7473,
         type: 3}
       propertyPath: backgroundSpeed
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8863970809156962816, guid: 26bf4b9927d07b246afbde4c175d7473,
+        type: 3}
+      propertyPath: pendulum
+      value: 
+      objectReference: {fileID: 1719995758}
     m_RemovedComponents:
     - {fileID: 2487735773207998097, guid: 26bf4b9927d07b246afbde4c175d7473, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 26bf4b9927d07b246afbde4c175d7473, type: 3}
@@ -827,13 +832,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boat: {fileID: 890896785}
   hook: {fileID: 884022059}
-  maxSpeed: 500
+  maxSpeed: 50
   minSpeed: 0
   maxLength: 8
   minLength: 1
   boatSpeed: 0
   ropeLength: 1
-  boatPower: 250
+  boatPower: 5
   winchPower: 4
 --- !u!4 &1719995759
 Transform:
@@ -1033,8 +1038,13 @@ PrefabInstance:
     - target: {fileID: 8863970809156962816, guid: 26bf4b9927d07b246afbde4c175d7473,
         type: 3}
       propertyPath: backgroundSpeed
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8863970809156962816, guid: 26bf4b9927d07b246afbde4c175d7473,
+        type: 3}
+      propertyPath: pendulum
+      value: 
+      objectReference: {fileID: 1719995758}
     m_RemovedComponents:
     - {fileID: 2487735773207998097, guid: 26bf4b9927d07b246afbde4c175d7473, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 26bf4b9927d07b246afbde4c175d7473, type: 3}
