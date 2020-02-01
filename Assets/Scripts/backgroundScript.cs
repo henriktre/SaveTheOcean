@@ -5,7 +5,7 @@ using UnityEngine;
 public class backgroundScript : MonoBehaviour
 {
 
-    public float backgroundSpeed = 10.0f;
+    public float backgroundSpeed = 0.0f;
 
     private Rigidbody2D rb2d;
 

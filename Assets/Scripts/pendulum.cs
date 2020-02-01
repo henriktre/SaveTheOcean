@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class pendulum : MonoBehaviour
 {
+  public backgroundScript backgroundScript;
   public GameObject boat;
   public GameObject hook;
   public float maxSpeed = 500.0f;
