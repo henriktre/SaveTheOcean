@@ -17,9 +17,11 @@ public class spawner : MonoBehaviour
       {
           switch(i.name)
           {
-            case "Sphere":
-              Debug.Log("this is a sphere");
-              entityList.Add(new entity(50, 250, false, i));
+            case "fish":
+              entityList.Add(new entity(50, 0, true, i));
+              break;
+            case "plastic":
+              entityList.Add(new entity(150, 250, false, i));
               break;
             default:
               Debug.Log("unknown prefab");
