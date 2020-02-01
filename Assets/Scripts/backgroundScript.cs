@@ -13,7 +13,7 @@ public class backgroundScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mesh_Renderer = GetComponent<MeshRenderer>();   
+        mesh_Renderer = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class backgroundScript : MonoBehaviour
             mesh_Renderer.sharedMaterial.SetTextureOffset("_MainTex", offset);
 
         }
-        
+
 
         //Move ship to left, both A and left key.
         if (Input.GetKey("left") || Input.GetKey("a"))
