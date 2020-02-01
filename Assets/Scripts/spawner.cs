@@ -5,17 +5,52 @@ using UnityEngine;
 public class spawner : MonoBehaviour
 {
     public GameObject[] entities;
+    public List<entity> entityList = new List<entity>();
+    float time = 0.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-      entities = Resources.LoadAll("MyItemsToLoad") as GameObject[];
+      entities = Resources.LoadAll<GameObject>("Prefabs") as GameObject[];
+      foreach (GameObject i in entities)
+      {
+          switch(i.name)
+          {
+            case "Sphere":
+              Debug.Log("this is a sphere");
+              entityList.Add(new entity(50, 250, false, i));
+              break;
+            default:
+              Debug.Log("unknown prefab");
+              break;
+          }
+      }
+    }
 
+    Vector3 RandomPos()
+    {
+      float x;
+      float y;
+      float z;
+      Vector3 pos;
+      x = Random.Range(11, 20);
+      y = Random.Range(-3, 3);
+      z = -1;
+      pos = new Vector3(x, y, z);
+      return pos;
     }
 
     // Update is called once per frame
+
     void Update()
     {
+      time += Time.deltaTime;
+      if(time > 1)
+      {
+        time = 0;
+        Vector3 pos = RandomPos();
+        Instantiate(entityList[0].gameObject, pos, Quaternion.identity);
+      }
 
     }
 }
@@ -23,10 +58,15 @@ public class spawner : MonoBehaviour
 [System.Serializable]
 public class entity
 {
+  public GameObject gameObject;
   public int rarity;
   public int worth;
-  public entity (int rarity, int worth)
+  public bool enemy;
+  public entity (int prarity, int pworth, bool penemy, GameObject pgameObject)
   {
-
+    gameObject = pgameObject;
+    rarity = prarity;
+    worth = pworth;
+    enemy = penemy;
   }
 }
