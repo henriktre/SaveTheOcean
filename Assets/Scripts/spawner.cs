@@ -48,7 +48,7 @@ public class spawner : MonoBehaviour
     void Update()
     {
       time += Time.deltaTime;
-      if(time > 0.1)
+      if(time > 1)
       {
         time = 0;
         Vector3 pos = RandomPos();
@@ -69,7 +69,7 @@ public class spawner : MonoBehaviour
 
 [System.Serializable]
 public class entity
-{
+{ //box collider center, x = worth, y = enemy - 0 for false and 1 for true
   public GameObject gameObject;
   public int rarity;
   public int worth;
@@ -80,5 +80,7 @@ public class entity
     rarity = prarity;
     worth = pworth;
     enemy = penemy;
+    int enemyInt = enemy ? 1 : 0;
+    gameObject.GetComponent<BoxCollider>().center = new Vector3(worth, enemyInt, 0);
   }
 }
