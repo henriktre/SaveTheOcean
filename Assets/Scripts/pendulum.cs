@@ -19,6 +19,7 @@ public class pendulum : MonoBehaviour
     void Update()
     {
         lineRenderer.SetPosition(1, hook.transform.position);
+        lineRenderer.SetPosition(0, boat.transform.position);
         hook.GetComponent<Rigidbody>().AddForce(force,0,0);
     }
 }
