@@ -827,7 +827,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boat: {fileID: 890896785}
   hook: {fileID: 884022059}
-  force: -3
+  maxSpeed: 500
+  minSpeed: 0
+  maxLength: 8
+  minLength: 1
+  boatSpeed: 0
+  ropeLength: 1
+  boatPower: 250
+  winchPower: 4
 --- !u!4 &1719995759
 Transform:
   m_ObjectHideFlags: 0

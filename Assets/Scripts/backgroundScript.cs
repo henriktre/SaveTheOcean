@@ -22,9 +22,9 @@ public class backgroundScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //Start the object moving (- because it moves backwards).
         rb2d.velocity = new Vector2(-backgroundSpeed, 0);
+
     }
 
 }
