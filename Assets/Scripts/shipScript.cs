@@ -5,11 +5,6 @@ using UnityEngine;
 public class shipScript : MonoBehaviour
 {
 
-    //public float speed = 0.2f;
-    //public float height = 0f;
-    //public float depth = 0f;
-    //private bool isZero = true;
-    //private float lowSpeed = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +15,13 @@ public class shipScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //transform.Translate(0.5f, 0f, 0f);
         //Move ship to the right with both D and right key.
-        /*if (Input.GetKey("right"))
+       /* if (Input.GetKey("right"))
         {
-            transform.Translate(speed * Time.deltaTime, height, depth);
+            //transform.Translate(0.5f, 0f, 0f);
+            //transform.Translate(height, speed * Time.deltaTime, depth);
         }
         if (Input.GetKey("d"))
         {
