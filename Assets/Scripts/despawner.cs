@@ -6,6 +6,9 @@ public class despawner : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-      Destroy(other.gameObject);
+        if (other.tag != "destroy")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

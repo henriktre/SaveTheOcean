@@ -33,7 +33,7 @@ public class pendulum : MonoBehaviour
         backgroundScript1.backgroundSpeed = boatSpeed/5;
         backgroundScript2.backgroundSpeed = boatSpeed/5;
         lineRenderer.SetPosition(0, boat.transform.position);
-        lineRenderer.SetPosition(1, hook.transform.position);
+        lineRenderer.SetPosition(1, hook.transform.position +Vector3.up);
         hook.GetComponent<Rigidbody>().AddForce(boatSpeed*-1,0,0);
         boat.GetComponent<SpringJoint>().minDistance = ropeLength;
         time+= Time.deltaTime;

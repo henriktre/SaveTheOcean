@@ -511,6 +511,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8286744, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fee1aa15a49502b40875aad9405d58fe, type: 3}
+    - target: {fileID: 11423466, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
+      propertyPath: titleMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: fee1aa15a49502b40875aad9405d58fe, type: 3}
+    - target: {fileID: 11423466, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
+      propertyPath: mainMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: fee1aa15a49502b40875aad9405d58fe, type: 3}
     - target: {fileID: 11467432, guid: 45616935e4fe10f48b62da1347801a16, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -9,6 +9,7 @@ public class anchor : MonoBehaviour
     public healthScript healthScript;
     public endOfGame endOfGame;
     public Vector3 properties;
+	public AudioSource audioClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class anchor : MonoBehaviour
     {//box collider center, x = worth, y = enemy - 0 for false and 1 for true
       properties = other.GetComponent<BoxCollider>().center;
       scoreScript.scoreValue += (int) properties.x;
+	  audioClip.Play();
       if(properties.y == 1)
       {
         healthScript.healthValue--;
