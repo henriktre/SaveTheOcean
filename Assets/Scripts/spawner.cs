@@ -48,7 +48,7 @@ public class spawner : MonoBehaviour
     void Update()
     {
       time += Time.deltaTime;
-      if(time > 1)
+      if(time > 0.1)
       {
         time = 0;
         Vector3 pos = RandomPos();
