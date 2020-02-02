@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class scoreScript : MonoBehaviour
 {
     public int scoreValue = 0;
+    public float timePlayed = 0.0f;
     Text score;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class scoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Money: " + scoreValue;
+      timePlayed += Time.deltaTime;
+        score.text = "Score: " + scoreValue;
     }
 }

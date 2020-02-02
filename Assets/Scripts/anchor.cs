@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class anchor : MonoBehaviour
 {
     public scoreScript scoreScript;
     public healthScript healthScript;
+    public endOfGame endOfGame;
     public Vector3 properties;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,10 @@ public class anchor : MonoBehaviour
         healthScript.healthValue--;
         if(healthScript.healthValue == 0)
         {
-          SceneManager.LoadScene(0);
+          Destroy(other.gameObject);
+          Debug.Log("hi from if(healthScript.healthValue == 0) inside achor");
+          endOfGame.EndGame(scoreScript.scoreValue, (int) scoreScript.timePlayed);
+
         }
       }
       Destroy(other.gameObject);
